@@ -1,0 +1,35 @@
+def add(a,b):
+    return a+b
+def remove(a,b):
+    return a-b
+def multiply(a,b):
+    return a*b
+def division(a,b):
+    if (b == 0):
+        print("Nu se poate efectua impartirea unui numr la 0")
+    else:
+        return a/b
+def print_subtotal(value):
+    print("Subtotalul este: ")
+    print(value)
+operatie = 0
+total = int(input('Introduceti un numar: '))
+while operatie != "=":
+    operatie = input("Introduceti semnul pentru operatie:")    
+    if operatie != "=":
+        numar_nou = int(input("introduceti un numar: "))
+    if operatie == "+":
+        total = add(total, numar_nou)
+        print_subtotal(total)
+    elif operatie == "-":
+        total = remove(total, numar_nou)
+        print_subtotal(total)
+    elif operatie == "*":
+        total = multiply(total, numar_nou)
+        print_subtotal(total)
+    elif operatie == "/":
+        total = division(total, numar_nou)
+        print_subtotal(total)
+else:
+    print("Totalul este: ")
+    print(total)
